@@ -10,9 +10,18 @@
 #include <IRsend.h>
 #include <WiFiClient.h>
 
-const char* ssid = "";
-const char* password = "";
-#error Set SSID and WIFI password
+
+#ifndef SSID
+#error 
+#endif
+
+#ifndef WPAPASSWORD
+#error
+#endif
+
+const char* ssid = "SSID";
+const char* password = "WPAPASSWORD";
+//#error Set SSID and WIFI password
 MDNSResponder mdns;
 
 ESP8266WebServer server(80);
